@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="amount" placeholder="USD miqdori">
+<button onclick="convert()">Convert</button>
+<pre id="result"></pre>
+
+
+  <script>
+    let rates = {
+  USD: 1,
+  EUR: 0.9,
+  UZS: 12500
+};
+
+function convert() {
+  let amount = Number(document.getElementById("amount").value);
+  document.getElementById("result").innerText =
+    `EUR: ${amount * rates.EUR} \nUZS: ${amount * rates.UZS}`;
+}
+
+  </script>
+</body>
+</html>
