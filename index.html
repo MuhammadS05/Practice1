@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="profile">
+  <h2 id="name"></h2>
+  <p id="age"></p>
+  <p id="city"></p>
+  <button onclick="changeCity()">Переехать</button>
+</div>
+
+<script>
+let person = {
+  name: "Ali",
+  age: 20,
+  city: "Tashkent"
+};
+
+document.getElementById("name").innerText = person.name;
+document.getElementById("age").innerText = `Age: ${person.age}`;
+document.getElementById("city").innerText = `City: ${person.city}`;
+
+function changeCity() {
+  person.city = "Samarkand";
+  document.getElementById("city").innerText = `City: ${person.city}`;
+}
+
+</script>
+
+</body>
+</html>
